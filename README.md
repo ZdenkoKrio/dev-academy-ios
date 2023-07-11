@@ -18,3 +18,7 @@ Welcome to the Futured Dev Academy!
 - Language: **Swift 5**
 - IDE: **Xcode 14**
 - Dependency management: **[Swift package manager](https://swift.org/package-manager/)**
+
+
+### My Name
+- Zdenko Čepan <zdenocepan@gmail.com>
