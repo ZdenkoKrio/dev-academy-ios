@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum MyError: Error {
-    case noData
-}
-
 
 class DataService {
     var data: Result<Features, Error>?
@@ -21,16 +17,17 @@ class DataService {
         
     }
     
-    func fetchData(_ n: @escaping (Result<Features, Error>) -> Void) {
-        guard data == nil else {
-            n(Result.failure(MyError.noData))
+    func fetchData(_ n: @escaping (Result<Features, Error>) -> Void) -> Void {
+        if data != nil {
+            n(data!)
             return
         }
+        
         let timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false)
         { [weak self] _ in
             let data = Result<Features, Error>.success(DataService.mockData)
-            n(data)
             self?.data = data
+            n(data)
         }
     }
 }
