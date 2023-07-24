@@ -18,8 +18,8 @@ class DataService {
     }
     
     func fetchData(_ n: @escaping (Result<Features, Error>) -> Void) -> Void {
-        if data != nil {
-            n(data!)
+        if let data = data {
+            n(data)
             return
         }
         
