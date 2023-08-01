@@ -6,29 +6,50 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct PlacesScene: View {
     @State var features: [Feature] = []
+    @State var showFavorites: Bool = false
+    @State var favorites: [Int] = []
     
     var body: some View {
         NavigationStack {
             Group {
                 if !features.isEmpty {
                     List(features, id: \.properties.ogcFid) { feature in
-                        PlacesRow(feature: feature)
-                            .onTapGesture {
-                                onFeatureTapped(feature: feature)
-                            }
+                        NavigationLink(destination: PlaceDetail(feature: feature, favorities: $favorites, isFav: favorites.contains(feature.properties.ogcFid))) {
+                            PlacesRow(feature: feature)
+                                .onTapGesture {
+                                    onFeatureTapped(feature: feature)
+                                }
+                        } // LINK
                     } // LIST
                     .listStyle(.plain)
                     .animation(.default, value: features)
                 } else {
-                    ProgressView()
+                    ActivityIndicatorView(isVisible: .constant(true),
+                    type: .growingCircle)
                 } // ELSE
             } // GROUP
             .navigationTitle("Kulturmapa")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Button(action: {showFavorites = true}) {
+                        Label("", systemImage: "heart.fill")
+                            .foregroundColor(.black)
+                    } // BUTTON
+                } // TOOLBAR ITEM
+                    } // TOOLBAR
         } // NAVIGATION
         .onAppear(perform: fetch)
+        .sheet(isPresented: $showFavorites) {
+            Text("Zatím tady nic neni.")
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+        }
+        
     }
     
     func onFeatureTapped(feature: Feature) {

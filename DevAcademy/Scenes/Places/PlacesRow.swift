@@ -22,7 +22,7 @@ struct PlacesRow: View {
                     .shadow(radius: 4
                     )
             } placeholder: {
-                EmptyView()
+                ProgressView()
             }
             VStack(alignment: .leading) {
                 Text(feature.properties.nazev)
