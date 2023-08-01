@@ -18,6 +18,8 @@
 		C8CACDBE2A66D07400FCA180 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDBD2A66D07400FCA180 /* Features.swift */; };
 		C8CACDC02A66D0F700FCA180 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDBF2A66D0F700FCA180 /* DataService.swift */; };
 		C8CACDC22A66D29100FCA180 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDC12A66D29100FCA180 /* Feature.swift */; };
+		C8CACDC82A70034200FCA180 /* PlacesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDC72A70034200FCA180 /* PlacesScene.swift */; };
+		C8CACDCA2A7004D100FCA180 /* PlacesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDC92A7004D100FCA180 /* PlacesRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		C8CACDBD2A66D07400FCA180 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		C8CACDBF2A66D0F700FCA180 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C8CACDC12A66D29100FCA180 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		C8CACDC72A70034200FCA180 /* PlacesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesScene.swift; sourceTree = "<group>"; };
+		C8CACDC92A7004D100FCA180 /* PlacesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,13 +53,6 @@
 		C056103C2A5C78CA007FB970 = {
 			isa = PBXGroup;
 			children = (
-				C8CACDC12A66D29100FCA180 /* Feature.swift */,
-				C8CACDBF2A66D0F700FCA180 /* DataService.swift */,
-				C8CACDBD2A66D07400FCA180 /* Features.swift */,
-				C8CACDB52A66C81500FCA180 /* Kind.swift */,
-				C8CACDBB2A66CDF200FCA180 /* Point.swift */,
-				C8CACDB92A66CC8400FCA180 /* Properties.swift */,
-				C8CACDB72A66C92200FCA180 /* PossibleKind.swift */,
 				C05610472A5C78CA007FB970 /* DevAcademy */,
 				C05610462A5C78CA007FB970 /* Products */,
 			);
@@ -72,6 +69,9 @@
 		C05610472A5C78CA007FB970 /* DevAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				C8CACDC52A70003E00FCA180 /* Services */,
+				C8CACDC42A70002C00FCA180 /* Model */,
+				C8CACDC32A70001A00FCA180 /* Scenes */,
 				C05610482A5C78CA007FB970 /* DevAcademyApp.swift */,
 				C056104A2A5C78CA007FB970 /* ContentView.swift */,
 				C056104C2A5C78CB007FB970 /* Assets.xcassets */,
@@ -86,6 +86,44 @@
 				C056104F2A5C78CB007FB970 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8CACDC32A70001A00FCA180 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C8CACDC62A70028400FCA180 /* Places */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C8CACDC42A70002C00FCA180 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8CACDC12A66D29100FCA180 /* Feature.swift */,
+				C8CACDBD2A66D07400FCA180 /* Features.swift */,
+				C8CACDB52A66C81500FCA180 /* Kind.swift */,
+				C8CACDBB2A66CDF200FCA180 /* Point.swift */,
+				C8CACDB92A66CC8400FCA180 /* Properties.swift */,
+				C8CACDB72A66C92200FCA180 /* PossibleKind.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8CACDC52A70003E00FCA180 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C8CACDBF2A66D0F700FCA180 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C8CACDC62A70028400FCA180 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				C8CACDC72A70034200FCA180 /* PlacesScene.swift */,
+				C8CACDC92A7004D100FCA180 /* PlacesRow.swift */,
+			);
+			path = Places;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +200,9 @@
 				C8CACDBE2A66D07400FCA180 /* Features.swift in Sources */,
 				C056104B2A5C78CA007FB970 /* ContentView.swift in Sources */,
 				C8CACDBC2A66CDF200FCA180 /* Point.swift in Sources */,
+				C8CACDCA2A7004D100FCA180 /* PlacesRow.swift in Sources */,
 				C05610492A5C78CA007FB970 /* DevAcademyApp.swift in Sources */,
+				C8CACDC82A70034200FCA180 /* PlacesScene.swift in Sources */,
 				C8CACDBA2A66CC8400FCA180 /* Properties.swift in Sources */,
 				C8CACDC22A66D29100FCA180 /* Feature.swift in Sources */,
 				C8CACDB62A66C81500FCA180 /* Kind.swift in Sources */,

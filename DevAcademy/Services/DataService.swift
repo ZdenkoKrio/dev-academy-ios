@@ -23,7 +23,7 @@ class DataService {
             return
         }
         
-        let timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false)
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false)
         { [weak self] _ in
             let data = Result<Features, Error>.success(DataService.mockData)
             self?.data = data
@@ -34,5 +34,5 @@ class DataService {
 
 
 extension DataService {
-    private static var mockData: Features = Features(features: [])
+    private static var mockData: Features = Features.mock
 }
