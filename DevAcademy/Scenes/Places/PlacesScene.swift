@@ -56,6 +56,6 @@ struct Places_Previews: PreviewProvider {
     static var previews: some View {
         PlacesScene()
             .environmentObject(Coordinator())
-            .environmentObject(ObservableObject())
+            .environmentObject(PlacesObservableObject())
     }
 }

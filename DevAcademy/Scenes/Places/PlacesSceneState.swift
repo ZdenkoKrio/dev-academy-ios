@@ -10,9 +10,12 @@ import SwiftUI
 struct PlacesSceneState: DynamicProperty{
     @EnvironmentObject private var placesObject: PlacesObservableObject
     
-    @State var features: [Feature] = []
     @State var showFavorites: Bool = false
     @State var favorites: [Int] = []
+    
+    var features: [Feature] {
+        placesObject.features
+    }
     
     var isLoaded: Bool {
         !features.isEmpty
@@ -31,6 +34,6 @@ struct PlacesSceneState: DynamicProperty{
     }
     
     func onFeatureTapped(feature: Feature) {
-        features.removeAll(where: {$0.properties.ogcFid == feature.properties.ogcFid})
+        placesObject.features.removeAll(where: {$0.properties.ogcFid == feature.properties.ogcFid})
     }
 }

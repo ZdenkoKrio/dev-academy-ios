@@ -37,8 +37,8 @@ struct PlacesRow: View {
     }
 }
 
-//struct PlacesRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlacesRow(feature: Features.mock.features[0])
-//    }
-//}
+struct PlacesRow_Previews: PreviewProvider {
+    static var previews: some View {
+        PlacesRow(state: PlacesRowState(feature: Features.mock.features[0]))
+    }
+}

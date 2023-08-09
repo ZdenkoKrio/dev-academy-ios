@@ -42,10 +42,10 @@ struct PlaceDetail: View {
                 .padding()
                 .onTapGesture {
                     state.isFav.toggle()
-                    if state.isFav { state.favorites.append(state.id)
-                    } else {
-                        state.favorites = state.favorites.filter { $0 != state.id }
-                    }
+                   // if state.isFav { state.favorites.append(state.id)
+                   // } else {
+                   //     state.favorites = state.favorites.filter { $0 != state.id }
+                   // }
                 }
         } // ZSTACK
     }

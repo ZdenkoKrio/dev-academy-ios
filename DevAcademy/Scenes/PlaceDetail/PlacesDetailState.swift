@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlacesDetailState: DynamicProperty {
     let feature: Feature
-    @Binding var favorites: [Int]
+    var favorites: [Int]
     @State var isFav: Bool
     
     var url: URL {

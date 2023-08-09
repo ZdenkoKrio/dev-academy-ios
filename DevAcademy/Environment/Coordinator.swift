@@ -14,8 +14,8 @@ final class Coordinator: ObservableObject {
         PlacesScene()
     }
     
-    func placesDetail(with feature: Feature, @Binding favorites: [Int], isFav: Bool) -> some View {
-        PlaceDetail(state: PlacesDetailState(feature: feature, favorites: $favorites, isFav: isFav))
+    func placesDetail(with feature: Feature, favorites: [Int], isFav: Bool) -> some View {
+        PlaceDetail(state: PlacesDetailState(feature: feature, favorites: favorites, isFav: isFav))
     }
     
     var favoriteScene: some View {
