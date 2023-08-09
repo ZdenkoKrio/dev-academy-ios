@@ -22,6 +22,14 @@
 		C8CACDCA2A7004D100FCA180 /* PlacesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDC92A7004D100FCA180 /* PlacesRow.swift */; };
 		C8CACDCC2A7933B800FCA180 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDCB2A7933B800FCA180 /* PlaceDetail.swift */; };
 		C8CACDCF2A793E5800FCA180 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = C8CACDCE2A793E5800FCA180 /* ActivityIndicatorView */; };
+		C8CACDD12A8274CA00FCA180 /* PlacesSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDD02A8274CA00FCA180 /* PlacesSceneState.swift */; };
+		C8CACDD32A82782700FCA180 /* PlacesRowState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDD22A82782700FCA180 /* PlacesRowState.swift */; };
+		C8CACDD52A8279B300FCA180 /* PlacesDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDD42A8279B300FCA180 /* PlacesDetailState.swift */; };
+		C8CACDD92A827D7C00FCA180 /* PlacesObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDD82A827D7C00FCA180 /* PlacesObservableObject.swift */; };
+		C8CACDDB2A8282E600FCA180 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDDA2A8282E600FCA180 /* Coordinator.swift */; };
+		C8CACDDD2A83C1B100FCA180 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDDC2A83C1B100FCA180 /* Environment.swift */; };
+		C8CACDE02A83CF3B00FCA180 /* ObservableObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDDF2A83CF3B00FCA180 /* ObservableObjects.swift */; };
+		C8CACDE22A83CF9B00FCA180 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDE12A83CF9B00FCA180 /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +48,14 @@
 		C8CACDC72A70034200FCA180 /* PlacesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesScene.swift; sourceTree = "<group>"; };
 		C8CACDC92A7004D100FCA180 /* PlacesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRow.swift; sourceTree = "<group>"; };
 		C8CACDCB2A7933B800FCA180 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
+		C8CACDD02A8274CA00FCA180 /* PlacesSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSceneState.swift; sourceTree = "<group>"; };
+		C8CACDD22A82782700FCA180 /* PlacesRowState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRowState.swift; sourceTree = "<group>"; };
+		C8CACDD42A8279B300FCA180 /* PlacesDetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailState.swift; sourceTree = "<group>"; };
+		C8CACDD82A827D7C00FCA180 /* PlacesObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesObservableObject.swift; sourceTree = "<group>"; };
+		C8CACDDA2A8282E600FCA180 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C8CACDDC2A83C1B100FCA180 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		C8CACDDF2A83CF3B00FCA180 /* ObservableObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjects.swift; sourceTree = "<group>"; };
+		C8CACDE12A83CF9B00FCA180 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +89,7 @@
 		C05610472A5C78CA007FB970 /* DevAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				C8CACDD72A827CE600FCA180 /* Environment */,
 				C8CACDC52A70003E00FCA180 /* Services */,
 				C8CACDC42A70002C00FCA180 /* Model */,
 				C8CACDC32A70001A00FCA180 /* Scenes */,
@@ -95,6 +112,7 @@
 		C8CACDC32A70001A00FCA180 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C8CACDD62A827A7900FCA180 /* PlaceDetail */,
 				C8CACDC62A70028400FCA180 /* Places */,
 			);
 			path = Scenes;
@@ -117,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				C8CACDBF2A66D0F700FCA180 /* DataService.swift */,
+				C8CACDE12A83CF9B00FCA180 /* Services.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -126,9 +145,38 @@
 			children = (
 				C8CACDC72A70034200FCA180 /* PlacesScene.swift */,
 				C8CACDC92A7004D100FCA180 /* PlacesRow.swift */,
-				C8CACDCB2A7933B800FCA180 /* PlaceDetail.swift */,
+				C8CACDD02A8274CA00FCA180 /* PlacesSceneState.swift */,
+				C8CACDD22A82782700FCA180 /* PlacesRowState.swift */,
 			);
 			path = Places;
+			sourceTree = "<group>";
+		};
+		C8CACDD62A827A7900FCA180 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C8CACDCB2A7933B800FCA180 /* PlaceDetail.swift */,
+				C8CACDD42A8279B300FCA180 /* PlacesDetailState.swift */,
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		C8CACDD72A827CE600FCA180 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				C8CACDDE2A83CF1400FCA180 /* ObservableObjects */,
+				C8CACDDA2A8282E600FCA180 /* Coordinator.swift */,
+				C8CACDDC2A83C1B100FCA180 /* Environment.swift */,
+				C8CACDDF2A83CF3B00FCA180 /* ObservableObjects.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		C8CACDDE2A83CF1400FCA180 /* ObservableObjects */ = {
+			isa = PBXGroup;
+			children = (
+				C8CACDD82A827D7C00FCA180 /* PlacesObservableObject.swift */,
+			);
+			path = ObservableObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,12 +260,20 @@
 				C8CACDBE2A66D07400FCA180 /* Features.swift in Sources */,
 				C056104B2A5C78CA007FB970 /* ContentView.swift in Sources */,
 				C8CACDBC2A66CDF200FCA180 /* Point.swift in Sources */,
+				C8CACDE22A83CF9B00FCA180 /* Services.swift in Sources */,
 				C8CACDCA2A7004D100FCA180 /* PlacesRow.swift in Sources */,
 				C05610492A5C78CA007FB970 /* DevAcademyApp.swift in Sources */,
+				C8CACDD12A8274CA00FCA180 /* PlacesSceneState.swift in Sources */,
+				C8CACDD32A82782700FCA180 /* PlacesRowState.swift in Sources */,
 				C8CACDC82A70034200FCA180 /* PlacesScene.swift in Sources */,
+				C8CACDDB2A8282E600FCA180 /* Coordinator.swift in Sources */,
 				C8CACDBA2A66CC8400FCA180 /* Properties.swift in Sources */,
+				C8CACDD92A827D7C00FCA180 /* PlacesObservableObject.swift in Sources */,
+				C8CACDDD2A83C1B100FCA180 /* Environment.swift in Sources */,
+				C8CACDE02A83CF3B00FCA180 /* ObservableObjects.swift in Sources */,
 				C8CACDC22A66D29100FCA180 /* Feature.swift in Sources */,
 				C8CACDB62A66C81500FCA180 /* Kind.swift in Sources */,
+				C8CACDD52A8279B300FCA180 /* PlacesDetailState.swift in Sources */,
 				C8CACDC02A66D0F700FCA180 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

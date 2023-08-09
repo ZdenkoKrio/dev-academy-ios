@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct PlaceDetail: View {
-    let feature: Feature
-    @Binding var favorities: [Int]
-    @State var isFav: Bool
+    let state: PlacesDetailState
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
             VStack {
-                AsyncImage(url: feature.properties.obrId1) {
+                AsyncImage(url: state.url) {
                     image in
                     image
                         .resizable()
@@ -27,35 +25,35 @@ struct PlaceDetail: View {
                 } placeholder: {
                     ProgressView()
                 }
-                Text(feature.properties.nazev)
+                Text(state.name)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .lineLimit(1)
-                Text(feature.properties.druh.rawValue)
+                Text(state.type)
                     .foregroundColor(.secondary)
                     .font(.title2)
                 
                 Spacer()
             } // VSTACK
             
-            Image(systemName: isFav ? "heart.fill" : "heart")
+            Image(systemName: state.isFav ? "heart.fill" : "heart")
                 .resizable()
                 .frame(width: 80, height: 80)
                 .padding()
                 .onTapGesture {
-                    isFav.toggle()
-                    if isFav { favorities.append(feature.properties.ogcFid)
+                    state.isFav.toggle()
+                    if state.isFav { state.favorites.append(state.id)
                     } else {
-                        favorities = favorities.filter { $0 != feature.properties.ogcFid }
+                        state.favorites = state.favorites.filter { $0 != state.id }
                     }
                 }
         } // ZSTACK
     }
 }
 
-struct PlaceDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaceDetail(feature: Features.mock.features[0], favorities: .constant([]), isFav: false)
-    }
-}
+//struct PlaceDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlaceDetail(feature: Features.mock.features[0], favorities: .constant([]), isFav: false)
+//    }
+//}
 

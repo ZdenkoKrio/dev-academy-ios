@@ -9,67 +9,53 @@ import SwiftUI
 import ActivityIndicatorView
 
 struct PlacesScene: View {
-    @State var features: [Feature] = []
-    @State var showFavorites: Bool = false
-    @State var favorites: [Int] = []
+    @EnvironmentObject var coordinator: Coordinator
+    
+    let state: PlacesSceneState = PlacesSceneState()
     
     var body: some View {
         NavigationStack {
             Group {
-                if !features.isEmpty {
-                    List(features, id: \.properties.ogcFid) { feature in
-                        NavigationLink(destination: PlaceDetail(feature: feature, favorities: $favorites, isFav: favorites.contains(feature.properties.ogcFid))) {
-                            PlacesRow(feature: feature)
+                if state.isLoaded {
+                    List(state.features, id: \.properties.ogcFid) { feature in
+                        NavigationLink(destination: coordinator.placesDetail(with: feature, favorites: state.favorites, isFav: state.isFavorit(feature: feature))) {
+                            PlacesRow(state: PlacesRowState(feature: feature))
                                 .onTapGesture {
-                                    onFeatureTapped(feature: feature)
-                                }
+                                    state.onFeatureTapped(feature: feature)
+                                } // TAP
                         } // LINK
                     } // LIST
                     .listStyle(.plain)
-                    .animation(.default, value: features)
+                    .animation(.default, value: state.features)
                 } else {
                     ActivityIndicatorView(isVisible: .constant(true),
-                    type: .growingCircle)
+                                          type: .growingCircle)
                 } // ELSE
             } // GROUP
             .navigationTitle("Kulturmapa")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .automatic) {
-                    Button(action: {showFavorites = true}) {
+                    Button(action: state.favoritesPressed) {
                         Label("", systemImage: "heart.fill")
                             .foregroundColor(.black)
                     } // BUTTON
                 } // TOOLBAR ITEM
-                    } // TOOLBAR
+            } // TOOLBAR
         } // NAVIGATION
-        .onAppear(perform: fetch)
-        .sheet(isPresented: $showFavorites) {
-            Text("Zatím tady nic neni.")
+        .onAppear(perform: state.fetch)
+        .sheet(isPresented: state.$showFavorites) {
+            coordinator.favoriteScene
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
         }
-        
-    }
-    
-    func onFeatureTapped(feature: Feature) {
-        features.removeAll(where: {$0.properties.ogcFid == feature.properties.ogcFid})
-    }
-    
-    func fetch() {
-        DataService.shared.fetchData{ result in
-            switch result {
-            case .success(let features):
-                self.features = features.features
-            case .failure(let error):
-                print(error)
-            } // SWITCH
-        } // DATA_SERVICE
     }
 }
 
 struct Places_Previews: PreviewProvider {
     static var previews: some View {
         PlacesScene()
+            .environmentObject(Coordinator())
+            .environmentObject(ObservableObject())
     }
 }
