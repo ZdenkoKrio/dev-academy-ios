@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct PlacesRow: View {
-    let feature: Feature
-    
+    let state: PlacesRowState
+    //Dotaz private
     var body: some View {
         HStack {
-            AsyncImage(url: feature.properties.obrId1) {
+            AsyncImage(url: state.url) {
                 image in
                 image
                     .resizable()
@@ -25,11 +25,11 @@ struct PlacesRow: View {
                 ProgressView()
             }
             VStack(alignment: .leading) {
-                Text(feature.properties.nazev)
+                Text(state.feature.properties.nazev)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .lineLimit(1)
-                Text(feature.properties.druh.rawValue)
+                Text(state.type)
                     .foregroundColor(.secondary)
                     .font(.subheadline)
             } // VSTACK
@@ -39,6 +39,6 @@ struct PlacesRow: View {
 
 struct PlacesRow_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesRow(feature: Features.mock.features[0])
+        PlacesRow(state: PlacesRowState(feature: Features.mock.features[0]))
     }
 }
