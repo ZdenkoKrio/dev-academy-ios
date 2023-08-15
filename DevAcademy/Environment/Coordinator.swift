@@ -20,5 +20,7 @@ final class Coordinator: ObservableObject {
     
     var favoriteScene: some View {
         Text("Zatím tady nic není")
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
     }
 }

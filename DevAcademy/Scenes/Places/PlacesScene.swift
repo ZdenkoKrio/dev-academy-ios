@@ -46,8 +46,6 @@ struct PlacesScene: View {
         .onAppear(perform: state.fetch)
         .sheet(isPresented: state.$showFavorites) {
             coordinator.favoriteScene
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
         }
     }
 }
@@ -55,7 +53,6 @@ struct PlacesScene: View {
 struct Places_Previews: PreviewProvider {
     static var previews: some View {
         PlacesScene()
-            .environmentObject(Coordinator())
-            .environmentObject(PlacesObservableObject())
+            .injectPreviewsEnvironment()
     }
 }

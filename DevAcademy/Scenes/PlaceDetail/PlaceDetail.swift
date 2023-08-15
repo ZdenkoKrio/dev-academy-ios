@@ -51,9 +51,9 @@ struct PlaceDetail: View {
     }
 }
 
-//struct PlaceDetail_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlaceDetail(feature: Features.mock.features[0], favorities: .constant([]), isFav: false)
-//    }
-//}
+struct PlaceDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        PlaceDetail(state: PlacesDetailState(feature: Features.mock.features[0], favorites: [], isFav: false))
+    }
+}
 
