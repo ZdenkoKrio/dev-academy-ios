@@ -10,15 +10,18 @@ import SwiftUI
 struct PlacesRowState: DynamicProperty {
     let feature: Feature
     
-    var url: URL {
-        feature.properties.obrId1
+    var url: URL? {
+        guard let obrId1 = feature.properties.obrId1, let url = URL(string: obrId1) else {
+            return nil
+        }
+        return url
     }
     
     var name: String {
-        feature.properties.nazev
+        feature.properties.title
     }
     
     var type: String {
-        feature.properties.druh.rawValue
+        feature.properties.kind.rawValue
     }
 }

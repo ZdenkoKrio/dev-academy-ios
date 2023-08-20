@@ -7,21 +7,21 @@
 
 import Foundation
 
-struct Features {
+struct Features: Decodable {
     let features: [Feature]
 }
 
 
 extension Features {
     static let mock: Features = Features(
-        features: [
+        features: [/*
             Feature(
                 geometry: Point(latitude: 49.1913, longitude: 16.6115),
                 properties: Properties(
                     ogcFid: 1,
                     obrId1: URL(string: "https://picsum.photos/200")!,
-                    druh: .kind(.divadlo),
-                    nazev: "Národní divadlo Brno"
+                    kind: .kind(.divadlo),
+                    title: "Národní divadlo Brno"
                 )
             ),
             Feature(
@@ -150,6 +150,6 @@ extension Features {
                     nazev: "Brněnské výstaviště"
                 )
             )
-        ]
+        */]
     )
 }

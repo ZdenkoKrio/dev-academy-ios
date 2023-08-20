@@ -30,6 +30,7 @@
 		C8CACDDD2A83C1B100FCA180 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDDC2A83C1B100FCA180 /* Environment.swift */; };
 		C8CACDE02A83CF3B00FCA180 /* ObservableObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDDF2A83CF3B00FCA180 /* ObservableObjects.swift */; };
 		C8CACDE22A83CF9B00FCA180 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDE12A83CF9B00FCA180 /* Services.swift */; };
+		C8CACDE42A8BB6F900FCA180 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDE32A8BB6F900FCA180 /* PlacesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		C8CACDDC2A83C1B100FCA180 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		C8CACDDF2A83CF3B00FCA180 /* ObservableObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjects.swift; sourceTree = "<group>"; };
 		C8CACDE12A83CF9B00FCA180 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		C8CACDE32A8BB6F900FCA180 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				C8CACDBF2A66D0F700FCA180 /* DataService.swift */,
 				C8CACDE12A83CF9B00FCA180 /* Services.swift */,
+				C8CACDE32A8BB6F900FCA180 /* PlacesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CACDE42A8BB6F900FCA180 /* PlacesService.swift in Sources */,
 				C8CACDCC2A7933B800FCA180 /* PlaceDetail.swift in Sources */,
 				C8CACDB82A66C92200FCA180 /* PossibleKind.swift in Sources */,
 				C8CACDBE2A66D07400FCA180 /* Features.swift in Sources */,

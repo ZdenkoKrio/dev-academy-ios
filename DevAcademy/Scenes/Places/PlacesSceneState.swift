@@ -25,8 +25,8 @@ struct PlacesSceneState: DynamicProperty{
         favorites.contains(feature.properties.ogcFid)
     }
     
-    func fetch() {
-        placesObject.loadData()
+    func fetch() async {
+       await placesObject.loadData()
     }
     
     func favoritesPressed() {

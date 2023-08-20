@@ -25,7 +25,7 @@ struct PlacesRow: View {
                 ProgressView()
             }
             VStack(alignment: .leading) {
-                Text(state.feature.properties.nazev)
+                Text(state.feature.properties.title)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .lineLimit(1)

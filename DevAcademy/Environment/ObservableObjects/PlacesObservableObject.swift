@@ -10,16 +10,13 @@ import Foundation
 final class PlacesObservableObject: ObservableObject {
     @Published var features: [Feature] = []
     
-    private let dataService: DataService = DataService.shared
+    private let placeService: PlacesService = ProductionPlacesService()
     
-    func loadData() {
-        dataService.fetchData{ result in
-            switch result {
-            case .success(let features):
-                self.features = features.features
-            case .failure(let error):
-                print(error)
-            } // SWITCH
-        } // DATA_SERVICE
+    func loadData() async {
+        do {
+            features = try await placeService.places().features
+        } catch {
+            print("Some Error: \(error)")
+        }
     }
 }

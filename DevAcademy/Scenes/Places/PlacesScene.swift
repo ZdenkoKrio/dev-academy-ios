@@ -43,7 +43,7 @@ struct PlacesScene: View {
                 } // TOOLBAR ITEM
             } // TOOLBAR
         } // NAVIGATION
-        .onAppear(perform: state.fetch)
+        .task{await state.fetch()}
         .sheet(isPresented: state.$showFavorites) {
             coordinator.favoriteScene
         }

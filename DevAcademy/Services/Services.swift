@@ -8,21 +8,21 @@
 import Foundation
 
 final class Services {
-    let dataService: DataService
+    let placeService: PlacesService
 
     init(
-        dataService: DataService
+        placeService: PlacesService
     ) {
-        self.dataService = dataService
+        self.placeService = placeService
     }
 }
 
 extension Services {
     convenience init() {
-        let dataService = DataService.shared
+        let placesService = ProductionPlacesService()
 
         self.init(
-            dataService: dataService
+            placeService: placesService
         )
     }
 }
@@ -30,6 +30,6 @@ extension Services {
 // MARK: - Mocks
 extension Services {
     static let mock = Services(
-        dataService: DataService.shared
+        placeService: MockPlacesService()
     )
 }
