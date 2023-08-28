@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlaceDetail: View {
+    @EnvironmentObject var coordinator: Coordinator
     let state: PlacesDetailState
     
     var body: some View {
@@ -24,7 +25,8 @@ struct PlaceDetail: View {
                         )
                 } placeholder: {
                     ProgressView()
-                }
+                } // ASYNC
+                
                 Text(state.name)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -32,6 +34,32 @@ struct PlaceDetail: View {
                 Text(state.type)
                     .foregroundColor(.secondary)
                     .font(.title2)
+                Group {
+                    Link("Program ", destination: URL(string: state.program)!)
+                        .font(.headline)
+                    HStack {
+                        Text("Web: ")
+                        Link("\(state.web) ", destination: URL(string: state.web)!)
+                    }
+                    
+                    Text("Adress: \(state.street) \(state.cpCo)")
+                    Text("Email: \(state.email)")
+                    Text("Phone: \(state.phone)")
+                } // GROUP
+                
+                Spacer()
+                
+                Button("Show map") {
+                    state.isPresentingMap.toggle()
+                } // BUTTON
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .frame(width: 150, height: 40)
+                .background(.blue)
+                .cornerRadius(15)
+                .shadow(radius: 25)
+                .padding()
                 
                 Spacer()
             } // VSTACK
@@ -41,19 +69,18 @@ struct PlaceDetail: View {
                 .frame(width: 80, height: 80)
                 .padding()
                 .onTapGesture {
-                    state.isFav.toggle()
-                   // if state.isFav { state.favorites.append(state.id)
-                   // } else {
-                   //     state.favorites = state.favorites.filter { $0 != state.id }
-                   // }
+                    state.favoritToggle()
                 }
         } // ZSTACK
+        .sheet(isPresented: state.$isPresentingMap) {
+            coordinator.mapScene(coor: state.geometry)
+        } // SHEET
     }
 }
 
 struct PlaceDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDetail(state: PlacesDetailState(feature: Features.mock.features[0], favorites: [], isFav: false))
+        PlaceDetail(state: PlacesDetailState(feature: Features.mock.features[0], favorites: .constant([]), isFav: false))
     }
 }
 

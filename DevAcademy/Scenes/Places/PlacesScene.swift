@@ -18,7 +18,7 @@ struct PlacesScene: View {
             Group {
                 if state.isLoaded {
                     List(state.features, id: \.properties.ogcFid) { feature in
-                        NavigationLink(destination: coordinator.placesDetail(with: feature, favorites: state.favorites, isFav: state.isFavorit(feature: feature))) {
+                        NavigationLink(destination: coordinator.placesDetail(with: feature, favorites: state.$favorites, isFav: state.isFavorit(feature: feature))) {
                             PlacesRow(state: PlacesRowState(feature: feature))
                                 .onTapGesture {
                                     state.onFeatureTapped(feature: feature)
@@ -33,7 +33,7 @@ struct PlacesScene: View {
                 } // ELSE
             } // GROUP
             .navigationTitle("Kulturmapa")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button(action: state.favoritesPressed) {
@@ -43,9 +43,11 @@ struct PlacesScene: View {
                 } // TOOLBAR ITEM
             } // TOOLBAR
         } // NAVIGATION
-        .task{await state.fetch()}
+        .task{
+            await state.fetch()
+        }
         .sheet(isPresented: state.$showFavorites) {
-            coordinator.favoriteScene
+            coordinator.favoriteScene(state: FavoritesSceneState(favorites: state.$favorites, features: state.features))
         }
     }
 }

@@ -9,14 +9,19 @@ import SwiftUI
 
 struct PlacesDetailState: DynamicProperty {
     let feature: Feature
-    var favorites: [Int]
+    @Binding var favorites: [Int]
     @State var isFav: Bool
+    @State var isPresentingMap: Bool = false
     
     var url: URL? {
         guard let obrId1 = feature.properties.obrId1, let url = URL(string: obrId1) else {
             return nil
         }
         return url
+    }
+    
+    var geometry: Point {
+        feature.geometry!
     }
     
     var name: String {
@@ -29,5 +34,38 @@ struct PlacesDetailState: DynamicProperty {
     
     var id: Int {
         feature.properties.ogcFid
+    }
+    
+    var phone: String {
+        feature.properties.phone ?? ""
+    }
+    
+    var email: String {
+        feature.properties.email ?? ""
+    }
+    
+    var street: String {
+        feature.properties.street ?? ""
+    }
+    
+    var cpCo: String {
+        feature.properties.cpCo ?? ""
+    }
+    
+    var program: String {
+        feature.properties.program ?? ""
+    }
+    
+    var web: String {
+        feature.properties.web ?? ""
+    }
+    
+    func favoritToggle() -> Void {
+        isFav.toggle()
+        if isFav {
+            favorites.append(id)
+        } else {
+            favorites = favorites.filter { $0 != id }
+        }
     }
 }

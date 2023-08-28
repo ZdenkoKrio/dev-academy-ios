@@ -12,7 +12,7 @@ struct Point: Decodable {
     let longitude: Double
     
     enum CodingKeys: String, CodingKey {
-        case latitude = "x"
-        case longitude = "y"
+        case latitude = "y"
+        case longitude = "x"
     }
 }

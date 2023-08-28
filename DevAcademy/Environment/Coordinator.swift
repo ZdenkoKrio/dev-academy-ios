@@ -14,13 +14,19 @@ final class Coordinator: ObservableObject {
         PlacesScene()
     }
     
-    func placesDetail(with feature: Feature, favorites: [Int], isFav: Bool) -> some View {
+    func placesDetail(with feature: Feature, favorites: Binding<[Int]>, isFav: Bool) -> some View {
         PlaceDetail(state: PlacesDetailState(feature: feature, favorites: favorites, isFav: isFav))
     }
     
-    var favoriteScene: some View {
-        Text("Zatím tady nic není")
-            .presentationDetents([.medium, .large])
+    func mapScene(coor: Point) -> some View {
+        MapDetailScene(state: MapDetailSceneState(point: coor))
+            .presentationDetents([.large])
+            .presentationDragIndicator(.visible)
+    }
+    
+    func favoriteScene(state: FavoritesSceneState) -> some View {
+        FavoritesScene(state: state)
+            .presentationDetents([.large])
             .presentationDragIndicator(.visible)
     }
 }

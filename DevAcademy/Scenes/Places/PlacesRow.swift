@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlacesRow: View {
     let state: PlacesRowState
-    //Dotaz private
+    
     var body: some View {
         HStack {
             AsyncImage(url: state.url) {

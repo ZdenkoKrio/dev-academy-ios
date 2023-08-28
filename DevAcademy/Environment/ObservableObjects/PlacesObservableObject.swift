@@ -12,6 +12,7 @@ final class PlacesObservableObject: ObservableObject {
     
     private let placeService: PlacesService = ProductionPlacesService()
     
+    @MainActor
     func loadData() async {
         do {
             features = try await placeService.places().features
