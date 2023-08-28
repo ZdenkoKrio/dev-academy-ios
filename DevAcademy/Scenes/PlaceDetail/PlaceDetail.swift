@@ -35,12 +35,12 @@ struct PlaceDetail: View {
                     .foregroundColor(.secondary)
                     .font(.title2)
                 Group {
-                    Link("Program ", destination: URL(string: state.program)!)
+                    Link("Program ", destination: (URL(string: state.program)!))
                         .font(.headline)
                     HStack {
                         Text("Web: ")
-                        Link("\(state.web) ", destination: URL(string: state.web)!)
-                    }
+                        Link("\(state.web) ", destination: URL(string: state.web)!)  // WTF ERROR without !
+                    } // HSTACK
                     
                     Text("Adress: \(state.street) \(state.cpCo)")
                     Text("Email: \(state.email)")

@@ -17,7 +17,7 @@ struct PlacesScene: View {
         NavigationStack {
             Group {
                 if state.isLoaded {
-                    List(state.features, id: \.properties.ogcFid) { feature in
+                    List(state.showFavorites ? state.getFavoritesRows() : state.features, id: \.properties.ogcFid) { feature in
                         NavigationLink(destination: coordinator.placesDetail(with: feature, favorites: state.$favorites, isFav: state.isFavorit(feature: feature))) {
                             PlacesRow(state: PlacesRowState(feature: feature))
                                 .onTapGesture {
@@ -37,7 +37,7 @@ struct PlacesScene: View {
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button(action: state.favoritesPressed) {
-                        Label("", systemImage: "heart.fill")
+                        Label("", systemImage: state.showFavorites ? "heart.fill" : "heart")
                             .foregroundColor(.black)
                     } // BUTTON
                 } // TOOLBAR ITEM
@@ -45,9 +45,6 @@ struct PlacesScene: View {
         } // NAVIGATION
         .task{
             await state.fetch()
-        }
-        .sheet(isPresented: state.$showFavorites) {
-            coordinator.favoriteScene(state: FavoritesSceneState(favorites: state.$favorites, features: state.features))
         }
     }
 }
