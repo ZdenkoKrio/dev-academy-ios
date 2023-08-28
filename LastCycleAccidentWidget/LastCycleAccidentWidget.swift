@@ -10,34 +10,29 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+    func placeholder(in context: Context) -> AccidentEntry {
+        AccidentEntry(date: Date(), accident: 4)
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (AccidentEntry) -> ()) {
+        let entry = AccidentEntry(date: Date(), accident: 4)
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let date = Date()
+        let entry: AccidentEntry = AccidentEntry(date: date, accident: 4)
+        
+        let timeline = Timeline(entries: [entry], policy: .atEnd)
         completion(timeline)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct AccidentEntry: TimelineEntry {
     let date: Date
-    let configuration: ConfigurationIntent
+    let accident: Int
+    //let configuration: ConfigurationIntent
+    // How Can I import or only use here code from my other files?
 }
 
 struct LastCycleAccidentWidgetEntryView : View {
@@ -62,7 +57,7 @@ struct LastCycleAccidentWidget: Widget {
 
 struct LastCycleAccidentWidget_Previews: PreviewProvider {
     static var previews: some View {
-        LastCycleAccidentWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        LastCycleAccidentWidgetEntryView(entry: AccidentEntry(date: Date(), accident: 4))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

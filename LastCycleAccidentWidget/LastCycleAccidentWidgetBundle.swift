@@ -12,6 +12,6 @@ import SwiftUI
 struct LastCycleAccidentWidgetBundle: WidgetBundle {
     var body: some Widget {
         LastCycleAccidentWidget()
-        LastCycleAccidentWidgetLiveActivity()
+        //LastCycleAccidentWidgetLiveActivity()
     }
 }
