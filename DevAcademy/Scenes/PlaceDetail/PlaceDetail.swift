@@ -88,7 +88,7 @@ struct PlaceDetail: View {
 
 struct PlaceDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDetail(state: PlacesDetailState(feature: Features.mock.features[0], favorites: .constant([]), isFav: false))
+        PlaceDetail(state: PlacesDetailState(feature: Features.mock.features[0], isFav: false))
     }
 }
 
