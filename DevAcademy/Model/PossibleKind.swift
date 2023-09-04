@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PossibleKind: RawRepresentable {
+enum PossibleKind: RawRepresentable, Decodable {
     init?(rawValue: String) {
         guard let n = Kind(rawValue: rawValue) else {
             self = .unknown(rawValue)

@@ -1,13 +1,13 @@
 //
-//  Point.swift
+//  Geometry.swift
 //  DevAcademy
 //
-//  Created by Zdenko Čepan on 18/07/2023.
+//  Created by Zdenko Čepan on 28.08.2023.
 //
 
 import Foundation
 
-struct Point: Decodable {
+struct WidgetPoint: Decodable {
     let latitude: Double
     let longitude: Double
     

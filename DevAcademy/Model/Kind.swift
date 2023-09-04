@@ -7,19 +7,19 @@
 
 import Foundation
 
-enum Kind: String {
-    case divadlo = "Divadlo"
-    case galerie = "Galerie"
+enum Kind: String, Decodable {
+    case theatre = "Divadlo"
+    case gallery = "Galerie"
     case hub = "Hub"
-    case hudebniKlub = "Hudebni klub"
-    case kino = "Kino"
-    case knihovna = "Knihovna"
-    case koncertniHala = "Koncertní hala"
-    case kulturniCentrum = "Kulturní centrum"
-    case kulturniPamátka = "Kulturní památka"
-    case letniKino = "Letní kino"
-    case muzeum = "Muzeum"
-    case podnikSLulturnimProgramem = "Podnik s kulturním programem"
-    case vystaviste = "Výstaviště"
-    case ostatni = "Ostatní"
+    case musicClub = "Hudebni klub"
+    case cinema = "Kino"
+    case library = "Knihovna"
+    case concertHall = "Koncertní hala"
+    case cultureCenter = "Kulturní centrum"
+    case cultureSight = "Kulturní památka"
+    case summerCinema = "Letní kino"
+    case museum = "Muzeum"
+    case cultureProgram = "Podnik s kulturním programem"
+    case exhibitionCenter = "Výstaviště"
+    case other = "Ostatní"
 }

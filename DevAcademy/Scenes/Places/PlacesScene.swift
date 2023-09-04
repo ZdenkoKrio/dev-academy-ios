@@ -17,8 +17,8 @@ struct PlacesScene: View {
         NavigationStack {
             Group {
                 if state.isLoaded {
-                    List(state.features, id: \.properties.ogcFid) { feature in
-                        NavigationLink(destination: coordinator.placesDetail(with: feature, favorites: state.favorites, isFav: state.isFavorit(feature: feature))) {
+                    List(state.showFavorites ? state.getFavoritesRows() : state.features, id: \.properties.ogcFid) { feature in
+                        NavigationLink(destination: coordinator.placesDetail(with: feature, favorites: state.$favorites, isFav: state.isFavorit(feature: feature))) {
                             PlacesRow(state: PlacesRowState(feature: feature))
                                 .onTapGesture {
                                     state.onFeatureTapped(feature: feature)
@@ -33,19 +33,18 @@ struct PlacesScene: View {
                 } // ELSE
             } // GROUP
             .navigationTitle("Kulturmapa")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button(action: state.favoritesPressed) {
-                        Label("", systemImage: "heart.fill")
+                        Label("", systemImage: state.showFavorites ? "heart.fill" : "heart")
                             .foregroundColor(.black)
                     } // BUTTON
                 } // TOOLBAR ITEM
             } // TOOLBAR
         } // NAVIGATION
-        .onAppear(perform: state.fetch)
-        .sheet(isPresented: state.$showFavorites) {
-            coordinator.favoriteScene
+        .task{
+            await state.fetch()
         }
     }
 }

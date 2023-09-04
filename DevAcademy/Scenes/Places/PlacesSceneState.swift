@@ -25,15 +25,19 @@ struct PlacesSceneState: DynamicProperty{
         favorites.contains(feature.properties.ogcFid)
     }
     
-    func fetch() {
-        placesObject.loadData()
+    func fetch() async {
+       await placesObject.loadData()
     }
     
     func favoritesPressed() {
-        showFavorites = true
+        showFavorites.toggle()
     }
     
     func onFeatureTapped(feature: Feature) {
         placesObject.features.removeAll(where: {$0.properties.ogcFid == feature.properties.ogcFid})
+    }
+    
+    func getFavoritesRows() -> [Feature] {
+        features.filter{ favorites.contains($0.properties.ogcFid) }
     }
 }
