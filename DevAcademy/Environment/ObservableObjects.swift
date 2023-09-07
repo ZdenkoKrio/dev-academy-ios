@@ -21,7 +21,7 @@ final class ObservableObjects {
 // MARK: - ObservableObjects + Extension
 extension ObservableObjects {
     convenience init(services: Services) {
-        let features = PlacesObservableObject()
+        let features = PlacesObservableObject(locationService: services.userLocationService)
 
         self.init(
             features: features
