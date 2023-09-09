@@ -11,11 +11,14 @@
 		C056104B2A5C78CA007FB970 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056104A2A5C78CA007FB970 /* ContentView.swift */; };
 		C056104D2A5C78CB007FB970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C056104C2A5C78CB007FB970 /* Assets.xcassets */; };
 		C05610502A5C78CB007FB970 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C056104F2A5C78CB007FB970 /* Preview Assets.xcassets */; };
-		C888E2B12A9D3228002D0E56 /* CycleAccidentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888E2B02A9D3228002D0E56 /* CycleAccidentsService.swift */; };
-		C888E2B42A9D34EC002D0E56 /* Accidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888E2B32A9D34EC002D0E56 /* Accidents.swift */; };
-		C888E2B62A9D34F7002D0E56 /* Accident.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888E2B52A9D34F7002D0E56 /* Accident.swift */; };
-		C888E2B82A9D3508002D0E56 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888E2B72A9D3508002D0E56 /* Attributes.swift */; };
-		C888E2BA2A9D3521002D0E56 /* WidgetPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888E2B92A9D3521002D0E56 /* WidgetPoint.swift */; };
+		C81FFFEC2AAB33F10032F371 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CACDF72A9CEB0300FCA180 /* WidgetKit.framework */; };
+		C81FFFED2AAB33F10032F371 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CACDF92A9CEB0400FCA180 /* SwiftUI.framework */; };
+		C81FFFF02AAB33F10032F371 /* NearestPlaceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81FFFEF2AAB33F10032F371 /* NearestPlaceWidgetBundle.swift */; };
+		C81FFFF22AAB33F10032F371 /* NearestPlaceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81FFFF12AAB33F10032F371 /* NearestPlaceWidget.swift */; };
+		C81FFFF52AAB33F30032F371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81FFFF42AAB33F30032F371 /* Assets.xcassets */; };
+		C81FFFF72AAB33F30032F371 /* NearestPlaceWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C81FFFF32AAB33F10032F371 /* NearestPlaceWidget.intentdefinition */; };
+		C81FFFF82AAB33F30032F371 /* NearestPlaceWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C81FFFF32AAB33F10032F371 /* NearestPlaceWidget.intentdefinition */; };
+		C81FFFFB2AAB33F30032F371 /* NearestPlaceWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C81FFFEB2AAB33F10032F371 /* NearestPlaceWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C8CACDB62A66C81500FCA180 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDB52A66C81500FCA180 /* Kind.swift */; };
 		C8CACDB82A66C92200FCA180 /* PossibleKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDB72A66C92200FCA180 /* PossibleKind.swift */; };
 		C8CACDBA2A66CC8400FCA180 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDB92A66CC8400FCA180 /* Properties.swift */; };
@@ -40,15 +43,6 @@
 		C8CACDE92A9CC43800FCA180 /* FavoritesSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDE82A9CC43800FCA180 /* FavoritesSceneState.swift */; };
 		C8CACDEE2A9CD93500FCA180 /* MapDetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDED2A9CD93500FCA180 /* MapDetailScene.swift */; };
 		C8CACDF02A9CDF8A00FCA180 /* MapDetailSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDEF2A9CDF8A00FCA180 /* MapDetailSceneState.swift */; };
-		C8CACDF82A9CEB0400FCA180 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CACDF72A9CEB0300FCA180 /* WidgetKit.framework */; };
-		C8CACDFA2A9CEB0400FCA180 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CACDF92A9CEB0400FCA180 /* SwiftUI.framework */; };
-		C8CACDFD2A9CEB0400FCA180 /* LastCycleAccidentWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDFC2A9CEB0400FCA180 /* LastCycleAccidentWidgetBundle.swift */; };
-		C8CACDFF2A9CEB0400FCA180 /* LastCycleAccidentWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACDFE2A9CEB0400FCA180 /* LastCycleAccidentWidgetLiveActivity.swift */; };
-		C8CACE012A9CEB0400FCA180 /* LastCycleAccidentWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACE002A9CEB0400FCA180 /* LastCycleAccidentWidget.swift */; };
-		C8CACE042A9CEB0600FCA180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8CACE032A9CEB0600FCA180 /* Assets.xcassets */; };
-		C8CACE062A9CEB0600FCA180 /* LastCycleAccidentWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C8CACE022A9CEB0400FCA180 /* LastCycleAccidentWidget.intentdefinition */; };
-		C8CACE072A9CEB0700FCA180 /* LastCycleAccidentWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C8CACE022A9CEB0400FCA180 /* LastCycleAccidentWidget.intentdefinition */; };
-		C8CACE0A2A9CEB0700FCA180 /* LastCycleAccidentWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C8CACDF52A9CEB0300FCA180 /* LastCycleAccidentWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C8CACE152A9E2D3000FCA180 /* StoredAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACE142A9E2D3000FCA180 /* StoredAsyncImage.swift */; };
 		C8CACE182A9E2DD200FCA180 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACE172A9E2DD200FCA180 /* ImageStorage.swift */; };
 		C8CACE1A2A9E2E2000FCA180 /* StoredAsyncImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CACE192A9E2E2000FCA180 /* StoredAsyncImageError.swift */; };
@@ -56,12 +50,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C8CACE082A9CEB0700FCA180 /* PBXContainerItemProxy */ = {
+		C81FFFF92AAB33F30032F371 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C056103D2A5C78CA007FB970 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C8CACDF42A9CEB0300FCA180;
-			remoteInfo = LastCycleAccidentWidgetExtension;
+			remoteGlobalIDString = C81FFFEA2AAB33F10032F371;
+			remoteInfo = NearestPlaceWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -72,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				C8CACE0A2A9CEB0700FCA180 /* LastCycleAccidentWidgetExtension.appex in Embed Foundation Extensions */,
+				C81FFFFB2AAB33F30032F371 /* NearestPlaceWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,11 +79,12 @@
 		C056104A2A5C78CA007FB970 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C056104C2A5C78CB007FB970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C056104F2A5C78CB007FB970 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C888E2B02A9D3228002D0E56 /* CycleAccidentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleAccidentsService.swift; sourceTree = "<group>"; };
-		C888E2B32A9D34EC002D0E56 /* Accidents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accidents.swift; sourceTree = "<group>"; };
-		C888E2B52A9D34F7002D0E56 /* Accident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accident.swift; sourceTree = "<group>"; };
-		C888E2B72A9D3508002D0E56 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
-		C888E2B92A9D3521002D0E56 /* WidgetPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetPoint.swift; sourceTree = "<group>"; };
+		C81FFFEB2AAB33F10032F371 /* NearestPlaceWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NearestPlaceWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81FFFEF2AAB33F10032F371 /* NearestPlaceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaceWidgetBundle.swift; sourceTree = "<group>"; };
+		C81FFFF12AAB33F10032F371 /* NearestPlaceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaceWidget.swift; sourceTree = "<group>"; };
+		C81FFFF32AAB33F10032F371 /* NearestPlaceWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NearestPlaceWidget.intentdefinition; sourceTree = "<group>"; };
+		C81FFFF42AAB33F30032F371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C81FFFF62AAB33F30032F371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C888E2BB2A9D3E72002D0E56 /* DevAcademy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevAcademy.entitlements; sourceTree = "<group>"; };
 		C8CACDB52A66C81500FCA180 /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
 		C8CACDB72A66C92200FCA180 /* PossibleKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleKind.swift; sourceTree = "<group>"; };
@@ -114,15 +109,8 @@
 		C8CACDE82A9CC43800FCA180 /* FavoritesSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSceneState.swift; sourceTree = "<group>"; };
 		C8CACDED2A9CD93500FCA180 /* MapDetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailScene.swift; sourceTree = "<group>"; };
 		C8CACDEF2A9CDF8A00FCA180 /* MapDetailSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailSceneState.swift; sourceTree = "<group>"; };
-		C8CACDF52A9CEB0300FCA180 /* LastCycleAccidentWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LastCycleAccidentWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CACDF72A9CEB0300FCA180 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C8CACDF92A9CEB0400FCA180 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		C8CACDFC2A9CEB0400FCA180 /* LastCycleAccidentWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCycleAccidentWidgetBundle.swift; sourceTree = "<group>"; };
-		C8CACDFE2A9CEB0400FCA180 /* LastCycleAccidentWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCycleAccidentWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		C8CACE002A9CEB0400FCA180 /* LastCycleAccidentWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCycleAccidentWidget.swift; sourceTree = "<group>"; };
-		C8CACE022A9CEB0400FCA180 /* LastCycleAccidentWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LastCycleAccidentWidget.intentdefinition; sourceTree = "<group>"; };
-		C8CACE032A9CEB0600FCA180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C8CACE052A9CEB0600FCA180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8CACE142A9E2D3000FCA180 /* StoredAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredAsyncImage.swift; sourceTree = "<group>"; };
 		C8CACE172A9E2DD200FCA180 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		C8CACE192A9E2E2000FCA180 /* StoredAsyncImageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredAsyncImageError.swift; sourceTree = "<group>"; };
@@ -139,12 +127,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8CACDF22A9CEB0300FCA180 /* Frameworks */ = {
+		C81FFFE82AAB33F10032F371 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8CACDFA2A9CEB0400FCA180 /* SwiftUI.framework in Frameworks */,
-				C8CACDF82A9CEB0400FCA180 /* WidgetKit.framework in Frameworks */,
+				C81FFFED2AAB33F10032F371 /* SwiftUI.framework in Frameworks */,
+				C81FFFEC2AAB33F10032F371 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				C05610472A5C78CA007FB970 /* DevAcademy */,
-				C8CACDFB2A9CEB0400FCA180 /* LastCycleAccidentWidget */,
+				C81FFFEE2AAB33F10032F371 /* NearestPlaceWidget */,
 				C8CACDF62A9CEB0300FCA180 /* Frameworks */,
 				C05610462A5C78CA007FB970 /* Products */,
 			);
@@ -165,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				C05610452A5C78CA007FB970 /* DevAcademy.app */,
-				C8CACDF52A9CEB0300FCA180 /* LastCycleAccidentWidgetExtension.appex */,
+				C81FFFEB2AAB33F10032F371 /* NearestPlaceWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,15 +183,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C888E2B22A9D334E002D0E56 /* Model */ = {
+		C81FFFEE2AAB33F10032F371 /* NearestPlaceWidget */ = {
 			isa = PBXGroup;
 			children = (
-				C888E2B32A9D34EC002D0E56 /* Accidents.swift */,
-				C888E2B52A9D34F7002D0E56 /* Accident.swift */,
-				C888E2B72A9D3508002D0E56 /* Attributes.swift */,
-				C888E2B92A9D3521002D0E56 /* WidgetPoint.swift */,
+				C81FFFEF2AAB33F10032F371 /* NearestPlaceWidgetBundle.swift */,
+				C81FFFF12AAB33F10032F371 /* NearestPlaceWidget.swift */,
+				C81FFFF32AAB33F10032F371 /* NearestPlaceWidget.intentdefinition */,
+				C81FFFF42AAB33F30032F371 /* Assets.xcassets */,
+				C81FFFF62AAB33F30032F371 /* Info.plist */,
 			);
-			path = Model;
+			path = NearestPlaceWidget;
 			sourceTree = "<group>";
 		};
 		C8CACDC32A70001A00FCA180 /* Scenes */ = {
@@ -308,21 +297,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C8CACDFB2A9CEB0400FCA180 /* LastCycleAccidentWidget */ = {
-			isa = PBXGroup;
-			children = (
-				C888E2B22A9D334E002D0E56 /* Model */,
-				C8CACDFC2A9CEB0400FCA180 /* LastCycleAccidentWidgetBundle.swift */,
-				C8CACDFE2A9CEB0400FCA180 /* LastCycleAccidentWidgetLiveActivity.swift */,
-				C8CACE002A9CEB0400FCA180 /* LastCycleAccidentWidget.swift */,
-				C8CACE022A9CEB0400FCA180 /* LastCycleAccidentWidget.intentdefinition */,
-				C8CACE032A9CEB0600FCA180 /* Assets.xcassets */,
-				C8CACE052A9CEB0600FCA180 /* Info.plist */,
-				C888E2B02A9D3228002D0E56 /* CycleAccidentsService.swift */,
-			);
-			path = LastCycleAccidentWidget;
-			sourceTree = "<group>";
-		};
 		C8CACE162A9E2DA900FCA180 /* StoredAsyncImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +322,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C8CACE092A9CEB0700FCA180 /* PBXTargetDependency */,
+				C81FFFFA2AAB33F30032F371 /* PBXTargetDependency */,
 			);
 			name = DevAcademy;
 			packageProductDependencies = (
@@ -358,21 +332,21 @@
 			productReference = C05610452A5C78CA007FB970 /* DevAcademy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C8CACDF42A9CEB0300FCA180 /* LastCycleAccidentWidgetExtension */ = {
+		C81FFFEA2AAB33F10032F371 /* NearestPlaceWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8CACE0B2A9CEB0700FCA180 /* Build configuration list for PBXNativeTarget "LastCycleAccidentWidgetExtension" */;
+			buildConfigurationList = C81FFFFE2AAB33F30032F371 /* Build configuration list for PBXNativeTarget "NearestPlaceWidgetExtension" */;
 			buildPhases = (
-				C8CACDF12A9CEB0300FCA180 /* Sources */,
-				C8CACDF22A9CEB0300FCA180 /* Frameworks */,
-				C8CACDF32A9CEB0300FCA180 /* Resources */,
+				C81FFFE72AAB33F10032F371 /* Sources */,
+				C81FFFE82AAB33F10032F371 /* Frameworks */,
+				C81FFFE92AAB33F10032F371 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = LastCycleAccidentWidgetExtension;
-			productName = LastCycleAccidentWidgetExtension;
-			productReference = C8CACDF52A9CEB0300FCA180 /* LastCycleAccidentWidgetExtension.appex */;
+			name = NearestPlaceWidgetExtension;
+			productName = NearestPlaceWidgetExtension;
+			productReference = C81FFFEB2AAB33F10032F371 /* NearestPlaceWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -388,7 +362,7 @@
 					C05610442A5C78CA007FB970 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
-					C8CACDF42A9CEB0300FCA180 = {
+					C81FFFEA2AAB33F10032F371 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -410,7 +384,7 @@
 			projectRoot = "";
 			targets = (
 				C05610442A5C78CA007FB970 /* DevAcademy */,
-				C8CACDF42A9CEB0300FCA180 /* LastCycleAccidentWidgetExtension */,
+				C81FFFEA2AAB33F10032F371 /* NearestPlaceWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -425,11 +399,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8CACDF32A9CEB0300FCA180 /* Resources */ = {
+		C81FFFE92AAB33F10032F371 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8CACE042A9CEB0600FCA180 /* Assets.xcassets in Resources */,
+				C81FFFF52AAB33F30032F371 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,12 +421,10 @@
 				C8CACE182A9E2DD200FCA180 /* ImageStorage.swift in Sources */,
 				C8CACDB82A66C92200FCA180 /* PossibleKind.swift in Sources */,
 				C8CACDBE2A66D07400FCA180 /* Features.swift in Sources */,
-				C888E2BA2A9D3521002D0E56 /* WidgetPoint.swift in Sources */,
 				C8CACDF02A9CDF8A00FCA180 /* MapDetailSceneState.swift in Sources */,
 				C056104B2A5C78CA007FB970 /* ContentView.swift in Sources */,
 				C8CACDBC2A66CDF200FCA180 /* Point.swift in Sources */,
 				C8CACE1C2AA75BF700FCA180 /* UserLocationService.swift in Sources */,
-				C888E2B42A9D34EC002D0E56 /* Accidents.swift in Sources */,
 				C8CACDE72A9CC42200FCA180 /* FavoritesScene.swift in Sources */,
 				C8CACDE22A83CF9B00FCA180 /* Services.swift in Sources */,
 				C8CACDCA2A7004D100FCA180 /* PlacesRow.swift in Sources */,
@@ -461,41 +433,37 @@
 				C8CACDD12A8274CA00FCA180 /* PlacesSceneState.swift in Sources */,
 				C8CACDD32A82782700FCA180 /* PlacesRowState.swift in Sources */,
 				C8CACDC82A70034200FCA180 /* PlacesScene.swift in Sources */,
-				C888E2B62A9D34F7002D0E56 /* Accident.swift in Sources */,
 				C8CACDDB2A8282E600FCA180 /* Coordinator.swift in Sources */,
-				C888E2B12A9D3228002D0E56 /* CycleAccidentsService.swift in Sources */,
 				C8CACDBA2A66CC8400FCA180 /* Properties.swift in Sources */,
 				C8CACDD92A827D7C00FCA180 /* PlacesObservableObject.swift in Sources */,
 				C8CACDDD2A83C1B100FCA180 /* Environment.swift in Sources */,
+				C81FFFF82AAB33F30032F371 /* NearestPlaceWidget.intentdefinition in Sources */,
 				C8CACE1A2A9E2E2000FCA180 /* StoredAsyncImageError.swift in Sources */,
 				C8CACDE02A83CF3B00FCA180 /* ObservableObjects.swift in Sources */,
 				C8CACDC22A66D29100FCA180 /* Feature.swift in Sources */,
-				C8CACE072A9CEB0700FCA180 /* LastCycleAccidentWidget.intentdefinition in Sources */,
 				C8CACDB62A66C81500FCA180 /* Kind.swift in Sources */,
 				C8CACDD52A8279B300FCA180 /* PlacesDetailState.swift in Sources */,
-				C888E2B82A9D3508002D0E56 /* Attributes.swift in Sources */,
 				C8CACDC02A66D0F700FCA180 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8CACDF12A9CEB0300FCA180 /* Sources */ = {
+		C81FFFE72AAB33F10032F371 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8CACE062A9CEB0600FCA180 /* LastCycleAccidentWidget.intentdefinition in Sources */,
-				C8CACDFF2A9CEB0400FCA180 /* LastCycleAccidentWidgetLiveActivity.swift in Sources */,
-				C8CACE012A9CEB0400FCA180 /* LastCycleAccidentWidget.swift in Sources */,
-				C8CACDFD2A9CEB0400FCA180 /* LastCycleAccidentWidgetBundle.swift in Sources */,
+				C81FFFF72AAB33F30032F371 /* NearestPlaceWidget.intentdefinition in Sources */,
+				C81FFFF22AAB33F10032F371 /* NearestPlaceWidget.swift in Sources */,
+				C81FFFF02AAB33F10032F371 /* NearestPlaceWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C8CACE092A9CEB0700FCA180 /* PBXTargetDependency */ = {
+		C81FFFFA2AAB33F30032F371 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C8CACDF42A9CEB0300FCA180 /* LastCycleAccidentWidgetExtension */;
-			targetProxy = C8CACE082A9CEB0700FCA180 /* PBXContainerItemProxy */;
+			target = C81FFFEA2AAB33F10032F371 /* NearestPlaceWidgetExtension */;
+			targetProxy = C81FFFF92AAB33F30032F371 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,10 +592,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DevAcademy/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FTU2HFGK26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DevAcademy/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -657,10 +626,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DevAcademy/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FTU2HFGK26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DevAcademy/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -680,17 +650,19 @@
 			};
 			name = Release;
 		};
-		C8CACE0C2A9CEB0700FCA180 /* Debug */ = {
+		C81FFFFC2AAB33F30032F371 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTU2HFGK26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LastCycleAccidentWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LastCycleAccidentWidget;
+				INFOPLIST_FILE = NearestPlaceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NearestPlaceWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location for found out the nearest place from list.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -698,7 +670,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy.LastCycleAccidentWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy.NearestPlaceWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -707,17 +679,19 @@
 			};
 			name = Debug;
 		};
-		C8CACE0D2A9CEB0700FCA180 /* Release */ = {
+		C81FFFFD2AAB33F30032F371 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTU2HFGK26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LastCycleAccidentWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LastCycleAccidentWidget;
+				INFOPLIST_FILE = NearestPlaceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NearestPlaceWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location for found out the nearest place from list.";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,7 +699,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy.LastCycleAccidentWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy.NearestPlaceWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -755,11 +729,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8CACE0B2A9CEB0700FCA180 /* Build configuration list for PBXNativeTarget "LastCycleAccidentWidgetExtension" */ = {
+		C81FFFFE2AAB33F30032F371 /* Build configuration list for PBXNativeTarget "NearestPlaceWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8CACE0C2A9CEB0700FCA180 /* Debug */,
-				C8CACE0D2A9CEB0700FCA180 /* Release */,
+				C81FFFFC2AAB33F30032F371 /* Debug */,
+				C81FFFFD2AAB33F30032F371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
