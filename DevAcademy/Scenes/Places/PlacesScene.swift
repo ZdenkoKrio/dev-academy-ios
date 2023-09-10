@@ -29,7 +29,7 @@ struct PlacesScene: View {
                     .animation(.default, value: state.features)
                 } else {
                     ActivityIndicatorView(isVisible: .constant(true),
-                                          type: .growingCircle)
+                                          type: .growingCircle).background(Color.red)
                 } // ELSE
             } // GROUP
             .navigationTitle("Kulturmapa")

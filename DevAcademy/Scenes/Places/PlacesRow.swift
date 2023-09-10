@@ -12,7 +12,7 @@ struct PlacesRow: View {
     
     var body: some View {
         HStack {
-            StoredAsyncImage(url: state.url!) {
+            StoredAsyncImage(url: state.url) {
                 image in
                 image
                     .resizable()

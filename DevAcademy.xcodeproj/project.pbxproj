@@ -592,7 +592,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DevAcademy/Preview Content\"";
-				DEVELOPMENT_TEAM = FTU2HFGK26;
+				DEVELOPMENT_TEAM = G76R74Z53C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DevAcademy/Info.plist;
@@ -608,7 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -626,7 +626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DevAcademy/Preview Content\"";
-				DEVELOPMENT_TEAM = FTU2HFGK26;
+				DEVELOPMENT_TEAM = G76R74Z53C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DevAcademy/Info.plist;
@@ -642,7 +642,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -657,7 +657,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FTU2HFGK26;
+				DEVELOPMENT_TEAM = G76R74Z53C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NearestPlaceWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NearestPlaceWidget;
@@ -670,7 +670,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy.NearestPlaceWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy2.LastCycleAccidentWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -686,7 +686,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FTU2HFGK26;
+				DEVELOPMENT_TEAM = G76R74Z53C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NearestPlaceWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NearestPlaceWidget;
@@ -699,7 +699,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy.NearestPlaceWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.DevAcademy2.LastCycleAccidentWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
