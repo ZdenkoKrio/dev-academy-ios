@@ -18,6 +18,7 @@ final class PlacesObservableObject: ObservableObject {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: "my.storage.favourites")
+            updatePlaces()
         }
     }
     
@@ -59,7 +60,7 @@ final class PlacesObservableObject: ObservableObject {
     @MainActor
     func loadData() async {
         do {
-            features = try await placeService.places().features
+            rawPlaces = try await placeService.places().features
         } catch {
             print("Some Error: \(error)")
         }
