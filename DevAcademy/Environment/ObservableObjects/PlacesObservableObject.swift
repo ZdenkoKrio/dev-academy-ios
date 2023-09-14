@@ -7,10 +7,10 @@
 
 import Foundation
 import SwiftUI
+import CoreLocation
 
 final class PlacesObservableObject: ObservableObject {
     @Published var features: [Feature] = []
-    var rawFeatures: [Feature] = []
     
     private(set) var favouriteFeatures: [Int]? {
         get {
@@ -21,13 +21,45 @@ final class PlacesObservableObject: ObservableObject {
         }
     }
     
+    private var rawPlaces: [Feature] = [] {
+        didSet {
+            updatePlaces()
+        }
+    }
+    
     private let placeService: PlacesService = ProductionPlacesService()
+    private let locationService: UserLocationService
+    private var lastUpdatedLocation: CLLocation?
+    
+    init(locationService: UserLocationService) {
+        self.locationService = locationService
+        
+        self.locationService.listenDidUpdateLocation { [weak self] location in
+            DispatchQueue.main.async {
+                guard let userLocation = location.first, ((self?.shouldUpdate(location: userLocation)) != nil) else { return }
+                self?.lastUpdatedLocation = userLocation
+                self?.updatePlaces()
+            }
+        }
+                
+        self.locationService.listenDidUpdateStatus { [weak self] status in
+            switch status {
+            case .notDetermined:
+                self?.locationService.requestAuthorization()
+            
+            case .authorizedWhenInUse, .authorizedAlways:
+                self?.beginLocationUpdates()
+            
+            default:
+                break
+            }
+        }
+    }
     
     @MainActor
     func loadData() async {
         do {
             features = try await placeService.places().features
-            rawFeatures = features
         } catch {
             print("Some Error: \(error)")
         }
@@ -42,5 +74,33 @@ final class PlacesObservableObject: ObservableObject {
             favourites = favourites.filter { $0 != feature }
             favouriteFeatures = favourites
         }
+    }
+    
+    func updatePlaces() {
+        var regularPlaces = rawPlaces
+                
+                if let lastUpdatedLocation {
+                    regularPlaces.sort { lPlace, rPlace in
+                        guard let rPoint = rPlace.geometry?.cllocation else {
+                            return false
+                        }
+                        guard let lPoint = lPlace.geometry?.cllocation else {
+                            return true
+                        }
+
+                        return lastUpdatedLocation.distance(from: lPoint).magnitude < lastUpdatedLocation.distance(from: rPoint).magnitude
+                    }
+                }
+        self.features = regularPlaces
+    }
+    
+    func beginLocationUpdates() {
+        self.locationService.startUpdatingLocation()
+    }
+    
+    func shouldUpdate(location: CLLocation) -> Bool {
+        lastUpdatedLocation.flatMap{
+            $0.distance(from: location).magnitude > 300
+        } ?? true
     }
 }
