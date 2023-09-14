@@ -16,7 +16,7 @@ struct FavoritesScene: View {
             Group {
                 if !state.isFavoritesEmpty {
                     List(state.getFavoritesRows(), id: \.properties.ogcFid) { row in
-                        NavigationLink(destination: coordinator.placesDetail(with: row, favorites: state.$favorites, isFav: state.isFavorit(feature: row))) {
+                        NavigationLink(destination: coordinator.placesDetail(with: row, isFav: state.isFavorit(feature: row))) {
                             PlacesRow(state: PlacesRowState(feature: row))
                         } // LINK
                     } // LIST

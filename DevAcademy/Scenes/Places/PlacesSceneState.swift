@@ -11,7 +11,6 @@ struct PlacesSceneState: DynamicProperty{
     @EnvironmentObject private var placesObject: PlacesObservableObject
     
     @State var showFavorites: Bool = false
-    @State var favorites: [Int] = []
     
     var features: [Feature] {
         placesObject.features
@@ -22,7 +21,10 @@ struct PlacesSceneState: DynamicProperty{
     }
     
     func isFavorit(feature: Feature) -> Bool {
-        favorites.contains(feature.properties.ogcFid)
+        guard let favorites = placesObject.favouriteFeatures else {
+            return false
+        }
+        return favorites.contains(feature.properties.ogcFid)
     }
     
     func fetch() async {
@@ -38,6 +40,9 @@ struct PlacesSceneState: DynamicProperty{
     }
     
     func getFavoritesRows() -> [Feature] {
-        features.filter{ favorites.contains($0.properties.ogcFid) }
+        guard let favorites = placesObject.favouriteFeatures else {
+            return []
+        }
+        return features.filter{ favorites.contains($0.properties.ogcFid) }
     }
 }

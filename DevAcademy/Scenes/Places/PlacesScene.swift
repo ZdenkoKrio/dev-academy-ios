@@ -18,7 +18,7 @@ struct PlacesScene: View {
             Group {
                 if state.isLoaded {
                     List(state.showFavorites ? state.getFavoritesRows() : state.features, id: \.properties.ogcFid) { feature in
-                        NavigationLink(destination: coordinator.placesDetail(with: feature, favorites: state.$favorites, isFav: state.isFavorit(feature: feature))) {
+                        NavigationLink(destination: coordinator.placesDetail(with: feature, isFav: state.isFavorit(feature: feature))) {
                             PlacesRow(state: PlacesRowState(feature: feature))
                                 .onTapGesture {
                                     state.onFeatureTapped(feature: feature)

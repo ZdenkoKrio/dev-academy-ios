@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PlacesDetailState: DynamicProperty {
+    @EnvironmentObject var placesObject: PlacesObservableObject
     let feature: Feature
-    @Binding var favorites: [Int]
+    //@Binding var favorites: [Int]
     @State var isFav: Bool
     @State var isPresentingMap: Bool = false
     
@@ -62,10 +63,6 @@ struct PlacesDetailState: DynamicProperty {
     
     func favoritToggle() -> Void {
         isFav.toggle()
-        if isFav {
-            favorites.append(id)
-        } else {
-            favorites = favorites.filter { $0 != id }
-        }
+        placesObject.updateFeatures(feature: id, append: isFav)
     }
 }
